@@ -21,7 +21,7 @@ test("Double click and Right click validations", async ({page})=>{
     await page.getByText("Double-Click Me To See Alert").dblclick()
 })
 
-test.only("Mouse over on an element", async ({page})=>{
+test("Mouse over on an element", async ({page})=>{
     await page.goto("https://www.spicejet.com/")
 
     // Mouse over on an element - hover()

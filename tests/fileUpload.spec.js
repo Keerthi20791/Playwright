@@ -1,0 +1,1 @@
+// page.locator().setInputFiles([filePath, filePath2])

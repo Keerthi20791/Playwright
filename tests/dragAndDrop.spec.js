@@ -14,7 +14,7 @@ test("Drag and drop using in built method", async ({page})=>{
     await expect(target).toHaveText("Dropped!")
 })
 
-test.only("Drag and drop using custom logic", async({page})=>{
+test("Drag and drop using custom logic", async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
     const source = await page.locator("div#draggable")
     const target = await page.locator("div#droppable")
