@@ -12,25 +12,26 @@
 
 
 const {test, expect}  = require('@playwright/test')
+// import {test, expect} from '@playwright/test'
 const path = require('path')
 
 
 test("Download File Hanlding", async ({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/p/download-files_25.html")
-    await page.locator("button#generatePdf").click()
+    await page.locator("button#generateTxt").click()
     const downloadResult = page.waitForEvent('download') // pending
-    await page.locator("a#pdfDownloadLink").click()
+    await page.locator("a#txtDownloadLink").click()
     const download = await downloadResult
 
     const downloadDir = await path.join(__dirname, "../download")
-    //console.log(downloadDir);
 
     const fileName = await download.suggestedFilename()
 
     const filePath = await path.join(downloadDir, fileName)
+    //console.log(filePath);
+
+    await download.saveAs(filePath)
+    await expect(filePath).toContain(fileName)
 
     // codegen
-
-
-
 })
