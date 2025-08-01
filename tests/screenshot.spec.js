@@ -19,4 +19,6 @@ test("Screenshot of the complete page", async ({page})=>{
     await page.screenshot({path: "screenshot/FUllScrollablePage.jpeg", fullPage: true})
 })
 
+// Annotations - 
+
 

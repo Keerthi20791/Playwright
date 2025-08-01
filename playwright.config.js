@@ -22,7 +22,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 10 : 1, // undefined - 8 test cases will run a parallel mode
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  //timeout : 60000,
+  //timeout : 10000,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
