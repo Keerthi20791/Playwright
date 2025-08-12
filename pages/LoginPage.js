@@ -10,6 +10,7 @@ export class LoginPage{
         this.username = page.getByPlaceholder('email@example.com')
         this.password = page.getByPlaceholder("enter your passsword")
         this.loginBtn = page.locator("#login")
+        this.errorMessage = page.locator("#toast-container")
     }
 
     // methods - Actions
@@ -24,8 +25,8 @@ export class LoginPage{
     }
 
      async invalidLoginIntoApplication(username, incorrectPassword){
-        await this.username.fill("")
-        await this.password.fill("")
+        await this.username.fill(username)
+        await this.password.fill(incorrectPassword)
         await this.loginBtn.click()
     }
     
