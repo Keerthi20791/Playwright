@@ -6,6 +6,7 @@ let url = "/client"
 let username = "testnHNk@gmail.com"
 let password = "Testing@1234"
 let productName = "IPHONE 13 PRO"
+let addToCartSuccessMsg = "Product Added To Cart"
 
 
 let loginPage
@@ -14,4 +15,17 @@ test.beforeEach(async ({page})=>{
     loginPage = new LoginPage(page)
     dashboardPage = new DashboardPage(page)
     await loginPage.launchURL(url)
+    await loginPage.loginIntoApplication(username, password)
 })
+
+test("Search and add the product to the cart", async ()=>{
+    await dashboardPage.searchProductAndAddToCart(productName)
+    await expect(dashboardPage.addToCartSuccessMsg).toHaveText(addToCartSuccessMsg)
+})
+
+test("Search and view the details of the product", async ()=>{
+    await dashboardPage.searchProductAndViewDetails(productName)
+    await expect(dashboardPage.viewPageProductName).toHaveText(productName)
+})
+
+

@@ -1,0 +1,11 @@
+
+{
+    "url": "/client",
+    "username": "testnHNk@gmail.com",
+    "password" : "Testing@1234",
+    "incorrectPassword" : "Test123",
+    "productName": "IPHONE 13 PRO",
+    "addToCartSuccessMsg": "Product Added To Cart",
+    "errorMessage" : "Incorrect email or password."
+}
+
