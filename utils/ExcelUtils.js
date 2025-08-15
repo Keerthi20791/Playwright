@@ -9,13 +9,17 @@
 
 const xlsx = require('xlsx')
 
-class ExcelUtils{
+
+export class ExcelUtils{
 
     static getDataFromExcel(filePath, sheetName){
 
         // Exception Handling
         try{
-
+            const workbook = xlsx.readFile(filePath)
+            const sheet = workbook.Sheets[sheetName]
+            const data = xlsx.utils.sheet_to_json(sheet)
+            return data
         }
         catch(msg){
             console.log(msg);

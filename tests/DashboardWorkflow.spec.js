@@ -16,12 +16,12 @@ test.beforeAll(async ({browser})=>{
     await loginPage.loginIntoApplication(data.username, data.password)
 })
 
-test("Search and add the product to the cart", async ()=>{
+test("Search and add the product to the cart",{tag: '@smoke'}, async ()=>{
     await dashboardPage.searchProductAndAddToCart(data.productName)
     await expect(dashboardPage.addToCartSuccessMsg).toHaveText(data.addToCartSuccessMsg)
 })
 
-test("Search and view the details of the product", async ()=>{
+test("Search and view the details of the product",{tag: '@regression'}, async ()=>{
     await dashboardPage.searchProductAndViewDetails(data.productName)
     await expect(dashboardPage.viewPageProductName).toHaveText(data.productName)
 })

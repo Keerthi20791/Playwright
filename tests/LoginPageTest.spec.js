@@ -19,12 +19,12 @@ test.beforeEach(async ({page})=>{
 })
 
 
-test("Valid Login Test", async ()=>{
+test("Valid Login Test", {tag:['@smoke', '@regression'] }, async ()=>{
     await loginPage.loginIntoApplication(username, password)
     await expect(dashboardPage.homePageIdentifier).toBeVisible()
 })
 
-test("Invalid Login Test", async ()=>{
+test("Invalid Login Test",{tag: '@regression'}, async ()=>{
     await loginPage.invalidLoginIntoApplication(username, incorrectPassword)
     await expect(loginPage.errorMessage).toContainText(errorMessage)
 })

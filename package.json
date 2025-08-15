@@ -2,7 +2,9 @@
   "name": "ishapwjsjuly2025",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "smokeTest": "npx playwright test --grep @smoke"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
