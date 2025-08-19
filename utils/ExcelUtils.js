@@ -29,5 +29,10 @@ export class ExcelUtils{
 
 }
 
-// Tagging a test case  - smoke, regression
-// 
+// Allure Report Generation - 
+// Monocart Report Generation
+
+// GitHub
+// Jenkins
+// API Test Case
+// AI - Generate auto code

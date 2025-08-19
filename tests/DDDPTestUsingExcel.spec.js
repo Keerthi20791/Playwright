@@ -3,6 +3,7 @@ const { LoginPage } = require('../pages/LoginPage')
 const { DashboardPage } = require('../pages/DashboardPage')
 const { ExcelUtils } = require('../utils/ExcelUtils')
 const path = require('path')
+const allure = require('allure-commandline')
 
 const filePath = path.join(__dirname, "../TestData/excel.xlsx")
 const sheetName = "Login"
@@ -21,7 +22,9 @@ test.beforeEach(async ({page})=>{
 })
 
 for(let data of datas){
-    test(`@smoke Search and add the product to the cart for ${data.productName}`, async ()=>{
+    test(`@smoke Search and add the product to the cart for ${data.productName}`, {
+        
+    },async ()=>{
         await loginPage.launchURL(data.url)
         await loginPage.loginIntoApplication(data.username, data.password)
         await dashboardPage.searchProductAndAddToCart(data.productName)
