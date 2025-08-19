@@ -16,5 +16,7 @@
 
 // New Requirement: Cart Page Test
 // 9. Move to the master branch - git checkout master
-// 10. 
+// 10. Pull all the latest changes from the master branch - git pull
+// 11. Repeat the step from #4 to #8
+
 
