@@ -13,10 +13,13 @@
 // 7. Commit the changes - git commit -m "commit message"
 // 8. Push the code the remote repository - git push origin branchName
 // git push origin dashboardPage
+// 9. Create a Pull Request from the UI
+// 10. Add the reviewer who can review and approve your code
+// 11. Merge the code to the master branch
 
 // New Requirement: Cart Page Test
-// 9. Move to the master branch - git checkout master
-// 10. Pull all the latest changes from the master branch - git pull
-// 11. Repeat the step from #4 to #8
+// 12. Move to the master branch - git checkout master
+// 13. Pull all the latest changes from the master branch - git pull
+// 14. Repeat the step from #4 to #11
 
 
