@@ -1,6 +1,6 @@
 // API - Application Programming Interface
 
-// Frontend  - JS/TS, Angular, Ajax vU
+// Frontend  - JS/TS, Angular, Ajax, VU
 // Backend   - Java/Python/Go/php/.Net
 // Database  - SQL. MySQl, MongoDB, PostgreS
 
@@ -31,10 +31,10 @@ Used to request the removal of a resource.
 
 
 
-// Response
+// Response format
 // Status Code - 200, 404, 500 - 200 OK 
 // Headers - Key Value Pair 
-// Response body - 
+// Response body - {}
 
 
 
