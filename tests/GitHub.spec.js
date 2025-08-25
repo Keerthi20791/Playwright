@@ -11,5 +11,15 @@
 // 6. Add the code to the local git - "git add ." - it will add all the files to the local git
 // git add fileName - a specific file to add it inside the local
 // 7. Commit the changes - git commit -m "commit message"
-// 8. git push 
+// 8. Push the code the remote repository - git push origin branchName
+// git push origin dashboardPage
+// 9. Create a Pull Request from the UI
+// 10. Add the reviewer who can review and approve your code
+// 11. Merge the code to the master branch
+
+// New Requirement: Cart Page Test
+// 12. Move to the master branch - git checkout master
+// 13. Pull all the latest changes from the master branch - git pull
+// 14. Repeat the step from #4 to #11
+
 
