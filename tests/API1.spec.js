@@ -25,6 +25,25 @@ test('GET method API automation', async()=>{
     })
     await expect(getResponse.status()).toBe(200)
     const data = await getResponse.json()
+    console.log(data.total_pages);
+})
+
+
+test('Post method API automation', async()=>{
+    const apiContext = await request.newContext()
+    const postResponse = await apiContext.post(postURL,{
+        data: postPayload,
+        headers: {
+            "x-api-key": "reqres-free-v1"
+        }
+    })
+    await expect(postResponse.status()).toBe(201)
+    const postData = await postResponse.json()
+    console.log(postData);
+    await expect(postData.name).toContain("API");
+    await expect(postData.job).toBe("CEO");
+
+
 })
 
 test('PUT method API automation', async()=>{
@@ -36,10 +55,22 @@ test('PUT method API automation', async()=>{
         }
     })
     await expect(putResponse.status()).toBe(200)
-    const data = await putResponse.json()
-    // console.log(await data.keys)
-    console.log(await data.name);
-    console.log(await data.job);
+    const putData = await putResponse.json()
+    console.log(putData)
+    await expect(putData.name).toContain("Test");
+    await expect(putData.job).toBe("Testing");
 })
+
+test('Delete method API automation', async()=>{
+    const apiContext = await request.newContext()
+    const deleteResponse = await apiContext.delete(deleteURL,{
+        headers: {
+            "x-api-key": "reqres-free-v1"
+        }
+    })
+    await expect(deleteResponse.status()).toBe(204)
+})
+
+
 
 
